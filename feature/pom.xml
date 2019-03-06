@@ -3,16 +3,16 @@
 
 	<parent>
 		<groupId>com.simonscholz</groupId>
-		<artifactId>com.simonscholz.app.root</artifactId>
+		<artifactId>com.simonscholz.re4fx.app.root</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
-	<artifactId>com.simonscholz.feature</artifactId>
+	<artifactId>com.simonscholz.re4fx.feature</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>com.simonscholz.app.feature</module>
+		<module>com.simonscholz.re4fx.app.feature</module>
 	</modules>
 </project>

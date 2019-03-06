@@ -5,7 +5,7 @@
 
 	<parent>
 		<groupId>com.simonscholz</groupId>
-		<artifactId>com.simonscholz.test</artifactId>
+		<artifactId>com.simonscholz.re4fx.test</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 

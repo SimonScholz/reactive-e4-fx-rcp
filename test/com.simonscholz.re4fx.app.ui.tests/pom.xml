@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.simonscholz</groupId>
+		<artifactId>com.simonscholz.re4fx.test</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>com.simonscholz.re4fx.app.ui.tests</artifactId>
+	<packaging>eclipse-test-plugin</packaging>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>.</directory>
+				<includes>
+					<include>META-INF/</include>
+				</includes>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-surefire-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<argLine>${fx.testArgLine} ${tycho.testArgLine.local}</argLine>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<dependency-resolution>
+						<extraRequirements>
+							<requirement>
+								<type>eclipse-feature</type>
+								<id>org.eclipse.fx.runtime.e4fx.feature</id>
+								<versionRange>0.0.0</versionRange>
+							</requirement>
+							<requirement>
+								<type>eclipse-feature</type>
+								<id>com.simonscholz.re4fx.app.feature</id>
+								<versionRange>0.0.0</versionRange>
+							</requirement>
+						</extraRequirements>
+					</dependency-resolution>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

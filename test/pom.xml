@@ -3,17 +3,17 @@
 
 	<parent>
 		<groupId>com.simonscholz</groupId>
-		<artifactId>com.simonscholz.app.root</artifactId>
+		<artifactId>com.simonscholz.re4fx.app.root</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
-	<artifactId>com.simonscholz.test</artifactId>
+	<artifactId>com.simonscholz.re4fx.test</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>com.simonscholz.app.ui.tests</module>
+		<module>com.simonscholz.re4fx.app.ui.tests</module>
 		<module>jacoco-aggregate-tests</module>
 	</modules>
 </project>
