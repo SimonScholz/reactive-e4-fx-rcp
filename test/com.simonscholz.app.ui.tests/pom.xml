@@ -27,7 +27,7 @@
 				<artifactId>tycho-surefire-plugin</artifactId>
 				<version>${tycho-version}</version>
 				<configuration>
-					<argLine>${fx.testArgLine}</argLine>
+					<argLine>${fx.testArgLine} ${tycho.testArgLine.local}</argLine>
 				</configuration>
 			</plugin>
 			<plugin>

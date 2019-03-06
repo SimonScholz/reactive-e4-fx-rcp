@@ -14,5 +14,6 @@
 
 	<modules>
 		<module>com.simonscholz.app.ui.tests</module>
+		<module>jacoco-aggregate-tests</module>
 	</modules>
 </project>
