@@ -32,7 +32,7 @@ cache:
 
 # Build the server first and then build the eclipse plug-ins
 script: 
-- ./mvnw clean verify
+- ./mvnw clean verify -Pjacoco
 
 # integration with codecov
 after_success:

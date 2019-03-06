@@ -45,14 +45,14 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.simonscholz</groupId>
-			<artifactId>com.simonscholz.app</artifactId>
+			<artifactId>com.simonscholz.re4fx.app</artifactId>
 			<version>${project.version}</version>
 			<scope>compile</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>com.simonscholz</groupId>
-			<artifactId>com.simonscholz.app.ui.tests</artifactId>
+			<artifactId>com.simonscholz.re4fx.app.ui.tests</artifactId>
 			<version>${project.version}</version>
 			<scope>test</scope>
 		</dependency>
