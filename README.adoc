@@ -7,5 +7,8 @@ You can build the app like this:
 ./mvnw clean verify
 ----
 
+== Sources
 
+* https://github.com/BestSolution-at/FX-Test
+* https://github.com/LorenzoBettini/tycho-multiproject-jacoco-report-example
 
