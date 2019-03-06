@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><?pde version="3.8"?><target name="target-platform">
+	<locations>
+		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+			<unit id="org.eclipse.gef.fx.sdk.feature.group" version="5.0.2.201901221055"/>
+			<unit id="org.eclipse.gef.geometry.sdk.feature.group" version="5.0.2.201901221055"/>
+			<unit id="org.eclipse.gef.mvc.sdk.feature.group" version="5.0.2.201901221055"/>
+			<unit id="org.eclipse.gef.zest.sdk.feature.group" version="5.0.2.201901221055"/>
+			<repository location="http://download.eclipse.org/releases/2019-03"/>
+		</location>
+		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+			<unit id="org.eclipse.fx.slf4j.target.feature.feature.group" version="3.5.0.201902250700"/>
+			<unit id="org.eclipse.fx.target.feature.feature.group" version="3.5.0.201902252257"/>
+			<repository location="http://download.eclipse.org/efxclipse/runtime-nightly/site"/>
+		</location>
+		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+			<unit id="at.bestsolution.fx.test.e4.junit" version="0.0.1.201708072210"/>
+			<unit id="at.bestsolution.fx.test.junit" version="0.0.1.201708072210"/>
+			<unit id="at.bestsolution.fx.test.rcontrol" version="0.0.1.201708072210"/>
+			<repository location="http://downloads.foss.bestsolution.at/fx-test/releases/0.0.1/repository/"/>
+		</location>
+	</locations>
+</target>

@@ -1,0 +1,11 @@
+= Eclipse 4 App with JavaFx and Project Reactor image:https://travis-ci.org/SimonScholz/reactive-e4-fx-rcp.svg?branch=master["Build Status", link="https://travis-ci.org/SimonScholz/reactive-e4-fx-rcp"]
+
+You can build the app like this:
+
+[source, console]
+----
+./mvnw clean verify
+----
+
+
+

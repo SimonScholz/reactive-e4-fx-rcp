@@ -1,0 +1,18 @@
+<project>
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.simonscholz</groupId>
+		<artifactId>com.simonscholz.app.root</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+
+	<artifactId>com.simonscholz.releng</artifactId>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>com.simonscholz.app.product</module>
+		<module>target-platform</module>
+	</modules>
+</project>
