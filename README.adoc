@@ -1,4 +1,6 @@
-= Eclipse 4 App with JavaFx and Project Reactor image:https://travis-ci.org/SimonScholz/reactive-e4-fx-rcp.svg?branch=master["Build Status", link="https://travis-ci.org/SimonScholz/reactive-e4-fx-rcp"]
+= Eclipse 4 App with JavaFx and Project Reactor
+
+image:https://travis-ci.org/SimonScholz/reactive-e4-fx-rcp.svg?branch=master["Build Status", link="https://travis-ci.org/SimonScholz/reactive-e4-fx-rcp"] image:https://codecov.io/gh/SimonScholz/reactive-e4-fx-rcp/branch/master/graph/badge.svg["Code Coverage", link="https://codecov.io/gh/SimonScholz/reactive-e4-fx-rcp"]
 
 You can build the app like this:
 
