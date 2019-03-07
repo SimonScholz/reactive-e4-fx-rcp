@@ -13,4 +13,5 @@ You can build the app like this:
 
 * https://github.com/BestSolution-at/FX-Test
 * https://github.com/LorenzoBettini/tycho-multiproject-jacoco-report-example
+* https://github.com/eclipse-efx/efxclipse-eclipse/wiki/Eclipse4-application-on-OpenJFX-11
 
