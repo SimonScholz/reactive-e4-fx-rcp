@@ -18,5 +18,18 @@
 			<unit id="at.bestsolution.fx.test.rcontrol" version="0.0.1.201708072210"/>
 			<repository location="http://downloads.foss.bestsolution.at/fx-test/releases/0.0.1/repository/"/>
 		</location>
+		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+			<unit id="Project-Reactor.feature.group" version="3.2.0"/>
+			<unit id="Project-Reactor.source.feature.group" version="3.2.0"/>
+			<unit id="jcommander.feature.group" version="1.72.0"/>
+			<unit id="jcommander.source.feature.group" version="1.72.0"/>
+			<repository location="https://dl.bintray.com/vogellacompany/OpenReq-Eclipse/Eclipse-Plugin-Deps/"/>
+		</location>
+		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+			<unit id="openjfx.media.feature.feature.group" version="11.0.0.201901231300"/>
+			<unit id="openjfx.standard.feature.feature.group" version="11.0.0.201901231300"/>
+			<unit id="openjfx.web.feature.feature.group" version="11.0.0.201901231300"/>
+			<repository location="http://downloads.efxclipse.bestsolution.at/p2-repos/openjfx-11/repository/"/>
+		</location>
 	</locations>
 </target>
