@@ -29,7 +29,7 @@
 		<module>bundle</module>
 		<module>releng</module>
 		<module>feature</module>
-		<module>test</module>
+		<!--module>test</module-->
 	</modules>
 
 	<pluginRepositories>
@@ -66,6 +66,30 @@
 						</artifact>
 					</target>
 					<pomDependencies>consider</pomDependencies>
+				      <dependency-resolution>
+					 <!--extraRequirements>
+					    <requirement>
+					       <type>eclipse-feature</type>
+					       <id>openjfx.media.feature.feature.group</id>
+					       <versionRange>11.0.0</versionRange>
+					    </requirement>
+					    <requirement>
+					       <type>eclipse-feature</type>
+					       <id>openjfx.standard.feature.feature.group</id>
+					       <versionRange>11.0.0</versionRange>
+					    </requirement>
+					    <requirement>
+					       <type>eclipse-feature</type>
+					       <id>openjfx.web.feature.feature.group</id>
+					       <versionRange>11.0.0</versionRange>
+					    </requirement>
+					    <requirement>
+					       <type>eclipse-feature</type>
+					       <id>openjfx.swing.feature.feature.group</id>
+					       <versionRange>11.0.0</versionRange>
+					    </requirement>
+					 </extraRequirements-->
+				      </dependency-resolution>
 					<environments>
 						<environment>
 							<os>linux</os>
@@ -107,15 +131,40 @@
 					<version>${tycho-version}</version>
 					<configuration>
 						<encoding>UTF-8</encoding>
-						<source>1.8</source>
-						<target>1.8</target>
-						<extraClasspathElements>
+						<source>11</source>
+						<target>11</target>
+						<!--extraClasspathElements>
 							<extraClasspathElement>
-								<groupId>javafx</groupId>
-								<artifactId>javafx.mvn</artifactId>
-								<version>2.2.0-SNAPSHOT</version>
+								<groupId>org.openjfx</groupId>
+								<artifactId>javafx-base</artifactId>
+								<version>11</version>
 							</extraClasspathElement>
-						</extraClasspathElements>
+							<extraClasspathElement>
+								<groupId>org.openjfx</groupId>
+								<artifactId>javafx-graphics</artifactId>
+								<version>11</version>
+							</extraClasspathElement>
+							<extraClasspathElement>
+								<groupId>org.openjfx</groupId>
+								<artifactId>javafx-controls</artifactId>
+								<version>11</version>
+							</extraClasspathElement>
+							<extraClasspathElement>
+								<groupId>org.openjfx</groupId>
+								<artifactId>javafx-fxml</artifactId>
+								<version>11</version>
+							</extraClasspathElement>
+							<extraClasspathElement>
+								<groupId>org.openjfx</groupId>
+								<artifactId>javafx-media</artifactId>
+								<version>11</version>
+							</extraClasspathElement>
+							<extraClasspathElement>
+								<groupId>org.openjfx</groupId>
+								<artifactId>javafx-web</artifactId>
+								<version>11</version>
+							</extraClasspathElement>
+						</extraClasspathElements-->
 					</configuration>
 				</plugin>
 				<plugin>

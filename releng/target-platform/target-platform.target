@@ -8,11 +8,6 @@
 			<repository location="http://download.eclipse.org/releases/2019-03"/>
 		</location>
 		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-			<unit id="org.eclipse.fx.slf4j.target.feature.feature.group" version="3.5.0.201902250700"/>
-			<unit id="org.eclipse.fx.target.feature.feature.group" version="3.5.0.201902252257"/>
-			<repository location="http://download.eclipse.org/efxclipse/runtime-nightly/site"/>
-		</location>
-		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 			<unit id="at.bestsolution.fx.test.e4.junit" version="0.0.1.201708072210"/>
 			<unit id="at.bestsolution.fx.test.junit" version="0.0.1.201708072210"/>
 			<unit id="at.bestsolution.fx.test.rcontrol" version="0.0.1.201708072210"/>
@@ -30,6 +25,12 @@
 			<unit id="openjfx.standard.feature.feature.group" version="11.0.0.201901231300"/>
 			<unit id="openjfx.web.feature.feature.group" version="11.0.0.201901231300"/>
 			<repository location="http://downloads.efxclipse.bestsolution.at/p2-repos/openjfx-11/repository/"/>
+			<unit id="openjfx.swing.feature.feature.group" version="11.0.0.201901231300"/>
+			<unit id="openjfx.swt.feature.feature.group" version="11.0.0.201901231300"/>
+		</location>
+		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+			<unit id="org.eclipse.fx.target.feature.feature.group" version="3.6.0.201903200202"/>
+			<repository location="http://download.eclipse.org/efxclipse/runtime-nightly/site"/>
 		</location>
 	</locations>
 </target>

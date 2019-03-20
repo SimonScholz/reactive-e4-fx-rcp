@@ -19,10 +19,13 @@ Require-Bundle: org.eclipse.fx.ui.workbench.fx,
  org.eclipse.core.databinding.property,
  org.eclipse.e4.ui.workbench,
  org.eclipse.e4.ui.services,
- org.eclipse.fx.ui.services
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+ org.eclipse.fx.ui.services,
+ openjfx.base;bundle-version="11.0.0",
+ openjfx.controls;bundle-version="11.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Import-Package: javax.annotation;version="1.0.0";resolution:=optional,
  javax.inject;version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Service-Component: OSGI-INF/services/theme-default.xml
 Automatic-Module-Name: com.simonscholz.app
+Bundle-Vendor: Simon Scholz

@@ -5,7 +5,7 @@ Bundle-SymbolicName: com.simonscholz.re4fx.app.ui.tests
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: SIMONSCHOLZ
 Automatic-Module-Name: com.simonscholz.app.ui.tests
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Require-Bundle: at.bestsolution.fx.test.e4.junit;bundle-version="0.0.1",
  at.bestsolution.fx.test.junit;bundle-version="0.0.1",
  at.bestsolution.fx.test.rcontrol;bundle-version="0.0.1",

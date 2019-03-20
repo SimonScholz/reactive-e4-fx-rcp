@@ -3,17 +3,19 @@
 
 <product name="Reactive E4 Fx App" uid="com.simonscholz.re4fx.app.product" id="com.simonscholz.re4fx.app.product" application="org.eclipse.fx.ui.workbench.fx.application" version="1.0.0" useFeatures="true" includeLaunchers="true">
 
+
    <configIni use="default">
    </configIni>
 
    <launcherArgs>
       <programArgs>-nosplash -clearPersistedState
       </programArgs>
-      <vmArgs>-Dorg.osgi.framework.bundle.parent=ext
+      <vmArgs>-Dorg.osgi.framework.bundle.parent=ext -Djava.library.path=FooBar
       </vmArgs>
    </launcherArgs>
 
    <windowImages/>
+
 
    <launcher>
       <win useIco="false">
@@ -21,8 +23,10 @@
       </win>
    </launcher>
 
+
    <vm>
    </vm>
+
 
    <plugins>
    </plugins>
@@ -40,5 +44,12 @@
       <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
       <plugin id="org.eclipse.osgi" autoStart="true" startLevel="-1" />
    </configurations>
+
+   <preferencesInfo>
+      <targetfile overwrite="false"/>
+   </preferencesInfo>
+
+   <cssInfo>
+   </cssInfo>
 
 </product>
