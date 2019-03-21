@@ -4,11 +4,8 @@
     <children xsi:type="advanced:PerspectiveStack" xmi:id="_xfmqAEBHEemNjZXcBsTEeA" elementId="com.simonscholz.app.perspectivestack.0">
       <children xsi:type="advanced:Perspective" xmi:id="_xve5EEBHEemNjZXcBsTEeA" elementId="com.simonscholz.app.perspective.0">
         <children xsi:type="basic:PartSashContainer" xmi:id="_ycSUsEBHEemNjZXcBsTEeA" elementId="com.simonscholz.app.partsashcontainer.0" horizontal="true">
-          <children xsi:type="basic:PartStack" xmi:id="_zmA84EBHEemNjZXcBsTEeA" elementId="com.simonscholz.app.partstack.0" containerData="2000">
-            <children xsi:type="advanced:Placeholder" xmi:id="_1PjtkEBHEemNjZXcBsTEeA" elementId="com.simonscholz.app.placeholder.0" ref="_1w9KcEBHEemNjZXcBsTEeA"/>
-          </children>
           <children xsi:type="basic:PartStack" xmi:id="_38HtkEBfEemNjZXcBsTEeA" elementId="com.simonscholz.re4fx.app.partstack.0" containerData="8000">
-            <children xsi:type="basic:Part" xmi:id="_xII4UEBfEemNjZXcBsTEeA" elementId="com.simonscholz.re4fx.app.part.realpart" contributionURI="bundleclass://com.simonscholz.re4fx.app/com.simonscholz.re4fx.app.part.ElementsPart" label="Real Part"/>
+            <children xsi:type="basic:Part" xmi:id="_xII4UEBfEemNjZXcBsTEeA" elementId="com.simonscholz.re4fx.app.part.realpart" contributionURI="bundleclass://com.simonscholz.re4fx.app/com.simonscholz.re4fx.app.part.ElementsPart" label="FileTree"/>
           </children>
         </children>
       </children>
