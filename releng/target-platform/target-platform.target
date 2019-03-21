@@ -25,5 +25,24 @@
 			<unit id="org.eclipse.fx.target.feature.feature.group" version="3.6.0.201903210201"/>
 			<repository location="http://download.eclipse.org/efxclipse/runtime-nightly/site"/>
 		</location>
+		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+			<unit id="Project-Reactor.feature.group" version="3.2.6"/>
+			<unit id="Project-Reactor.source.feature.group" version="3.2.6"/>
+			<unit id="RSocket.feature.group" version="0.11.15"/>
+			<unit id="RSocket.source.feature.group" version="0.11.15"/>
+			<unit id="controlsfx.feature.group" version="11.0.0"/>
+			<unit id="controlsfx.source.feature.group" version="11.0.0"/>
+			<unit id="jackson.feature.group" version="2.9.8"/>
+			<unit id="jackson.source.feature.group" version="2.9.8"/>
+			<unit id="jcommander.feature.group" version="1.72.0"/>
+			<unit id="jcommander.source.feature.group" version="1.72.0"/>
+			<unit id="mockito.feature.group" version="2.25.1"/>
+			<unit id="mockito.source.feature.group" version="2.25.1"/>
+			<unit id="reactorfx.feature.group" version="2.0.0"/>
+			<unit id="reactorfx.source.feature.group" version="2.0.0"/>
+			<unit id="zt-exec.feature.group" version="1.10.0"/>
+			<unit id="zt-exec.source.feature.group" version="1.10.0"/>
+			<repository location="https://dl.bintray.com/simon-scholz/eclipse-apps/re4fx/0.1.0/"/>
+		</location>
 	</locations>
 </target>
