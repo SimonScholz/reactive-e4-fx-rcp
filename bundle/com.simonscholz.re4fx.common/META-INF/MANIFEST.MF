@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Common
+Bundle-SymbolicName: com.simonscholz.re4fx.common
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: SIMONSCHOLZ
+Automatic-Module-Name: com.simonscholz.re4fx.common
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Require-Bundle: io.projectreactor.reactor-core;bundle-version="3.2.6",
+ org.reactivestreams.reactive-streams;bundle-version="1.0.2",
+ com.fasterxml.jackson.core.jackson-core;bundle-version="2.9.8"
+Export-Package: com.simonscholz.re4fx.common.domain,
+ com.simonscholz.re4fx.common.services
