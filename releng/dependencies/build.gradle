@@ -18,7 +18,6 @@ platform {
 	defaultQualifierMap.prefix = ''
 
 	feature(id: 'controlsfx', name: 'ControlsFx', version: '11.0.0') {
-
 		plugin('org.controlsfx:controlsfx:11.0.0-RC2') {
 			bnd {
 				// fix manifest problems due to e(fx)clipse class path resolution 
@@ -27,12 +26,26 @@ platform {
 			}
 		}
 	}
+
+	feature(id: 'jackson', name: 'Jackson', version: '2.9.8') {
+		plugin('com.fasterxml.jackson.core:jackson-databind:2.9.8')
+	}
+
+	feature(id: 'mockito', name: 'Mockito', version: '2.25.1') {
+		plugin('org.mockito:mockito-core:2.25.1')
+	}
+
+	feature(id: 'reactorfx', name: 'ReactorFx', version: '2.0.0') {
+		plugin('com.github.shadskii:reactorfx:2.0.0') {
+			bnd {
+				instruction 'Import-Package', 'freetimelabs.io.reactorfx.schedulers;version="[2.0,3)", reactor.core,reactor.core.publisher,reactor.core.scheduler'
+			}
+		}
+	}
 		
 	feature(id: 'Project-Reactor', name: 'Project Reactor', version: '3.2.6') {
 
-		plugin('io.projectreactor.netty:reactor-netty:0.8.5.RELEASE') {
-			
-		}
+		plugin('io.projectreactor.netty:reactor-netty:0.8.5.RELEASE')
 		
 		plugin('io.projectreactor:reactor-core:3.2.6.RELEASE') {
 			bnd {
