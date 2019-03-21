@@ -35,14 +35,10 @@ platform {
 		plugin('org.mockito:mockito-core:2.25.1')
 	}
 
-	feature(id: 'reactorfx', name: 'ReactorFx', version: '2.0.0') {
-		plugin('com.github.shadskii:reactorfx:2.0.0') {
-			bnd {
-				instruction 'Import-Package', 'freetimelabs.io.reactorfx.schedulers;version="[2.0,3)", reactor.core,reactor.core.publisher,reactor.core.scheduler'
-			}
-		}
+	feature(id: 'zt-exec', name: 'zt-exec', version: '1.10') {
+		plugin('org.zeroturnaround:zt-exec:1.10')
 	}
-		
+
 	feature(id: 'Project-Reactor', name: 'Project Reactor', version: '3.2.6') {
 
 		plugin('io.projectreactor.netty:reactor-netty:0.8.5.RELEASE')
@@ -71,6 +67,14 @@ platform {
 				optionalImport 'kotlin'
 				optionalImport 'kotlin.jvm.functions'
 				optionalImport 'kotlin.jvm.internal'
+			}
+		}
+	}
+	
+	feature(id: 'reactorfx', name: 'ReactorFx', version: '2.0.0') {
+		plugin('com.github.shadskii:reactorfx:2.0.0') {
+			bnd {
+				instruction 'Import-Package', 'freetimelabs.io.reactorfx.schedulers;version="[2.0,3)", reactor.core,reactor.core.publisher,reactor.core.scheduler'
 			}
 		}
 	}
