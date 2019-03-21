@@ -31,6 +31,9 @@
       <feature id="com.simonscholz.re4fx.app.feature"/>
       <feature id="org.eclipse.fx.runtime.e4fx.feature"/>
       <feature id="openjfx.standard.feature" installMode="root"/>
+      <feature id="controlsfx" installMode="root"/>
+      <feature id="reactorfx" installMode="root"/>
+      <feature id="jackson" installMode="root"/>
    </features>
 
    <configurations>

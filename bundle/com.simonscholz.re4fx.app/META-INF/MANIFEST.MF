@@ -20,7 +20,14 @@ Require-Bundle: org.eclipse.fx.ui.workbench.fx,
  org.eclipse.core.databinding.property,
  org.eclipse.e4.ui.workbench,
  org.eclipse.e4.ui.services,
- org.eclipse.fx.ui.services
+ org.eclipse.fx.ui.services,
+ org.controlsfx;bundle-version="11.0.0",
+ com.simonscholz.re4fx.common;bundle-version="1.0.0",
+ io.projectreactor.reactor-core;bundle-version="3.2.6",
+ org.reactivestreams.reactive-streams;bundle-version="1.0.2",
+ com.github.shadskii.reactorfx;bundle-version="2.0.0",
+ com.fasterxml.jackson.core.jackson-core;bundle-version="2.9.8",
+ com.fasterxml.jackson.core.jackson-databind;bundle-version="2.9.8"
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Automatic-Module-Name: com.simonscholz.app
 Import-Package: javax.annotation;version="1.0.0";resolution:=optional,
