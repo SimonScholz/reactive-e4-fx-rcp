@@ -3,10 +3,10 @@ screenshots/
 
 .class
 .metadata
-**/bin/
-**/target/
-**/build/
-**/.gradle/*
+bin/
+target/
+build/
+.gradle/
 
 # You can use wildcards as well
 
