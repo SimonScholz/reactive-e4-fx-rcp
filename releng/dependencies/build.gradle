@@ -1,0 +1,110 @@
+plugins {
+  id "org.standardout.bnd-platform" version "1.7.0"
+}
+
+repositories {
+	jcenter()
+}
+
+platform {
+	categoryId = 're4fx-Libs'
+	categoryName = 're4fx Libs'
+
+	generatePlatformFeature = false
+
+	defaultQualifier = ''
+	useBndHashQualifiers = false
+	useFeatureHashQualifiers = false
+	defaultQualifierMap.prefix = ''
+
+	feature(id: 'controlsfx', name: 'ControlsFx', version: '11.0.0') {
+
+		plugin('org.controlsfx:controlsfx:11.0.0-RC2') {
+			bnd {
+				optionalImport 'com.sun.javafx.event'
+				optionalImport 'com.sun.javafx.scene.control'
+				optionalImport 'com.sun.javafx.scene.control.behavior'
+				optionalImport 'com.sun.javafx.scene.control.inputmap'
+				optionalImport 'com.sun.javafx.scene.traversal'
+				optionalImport 'com.sun.webkit'
+				optionalImport 'javafx.animation'
+				optionalImport 'javafx.application'
+				optionalImport 'javafx.beans'
+				optionalImport 'javafx.beans.binding'
+				optionalImport 'javafx.beans.property'
+				optionalImport 'javafx.beans.value'
+				optionalImport 'javafx.collections'
+				optionalImport 'javafx.collections.transformation'
+				optionalImport 'javafx.concurrent'
+				optionalImport 'javafx.css'
+				optionalImport 'javafx.css.converter'
+				optionalImport 'javafx.event'
+				optionalImport 'javafx.geometry'
+				optionalImport 'javafx.scene'
+				optionalImport 'javafx.scene.chart'
+				optionalImport 'javafx.scene.control'
+				optionalImport 'javafx.scene.control.cell'
+				optionalImport 'javafx.scene.control.skin'
+				optionalImport 'javafx.scene.image'
+				optionalImport 'javafx.scene.input'
+				optionalImport 'javafx.scene.layout'
+				optionalImport 'javafx.scene.media'
+				optionalImport 'javafx.scene.paint'
+				optionalImport 'javafx.scene.shape'
+				optionalImport 'javafx.scene.text'
+				optionalImport 'javafx.scene.web'
+				optionalImport 'javafx.stage'
+				optionalImport 'javafx.util'
+				optionalImport 'javax.swing'
+				optionalImport 'javax.swing.table'
+			}
+		}
+	}
+		
+	feature(id: 'Project-Reactor', name: 'Project Reactor', version: '3.2.6') {
+
+		plugin('io.projectreactor.netty:reactor-netty:0.8.5.RELEASE') {
+			
+		}
+		
+		plugin('io.projectreactor:reactor-core:3.2.6.RELEASE') {
+			bnd {
+				optionalImport 'javax.swing'
+				optionalImport 'kotlin'
+				optionalImport 'kotlin.jvm'
+				optionalImport 'kotlin.jvm.functions'
+				optionalImport 'kotlin.jvm.internal'
+				optionalImport 'kotlin.collections'
+				optionalImport 'kotlin.jvm.internal.markers'
+				optionalImport 'kotlin.reflect'
+				optionalImport 'kotlin.sequences'
+				optionalImport 'sun.misc'
+				optionalImport 'io.micrometer.core.instrument'
+				optionalImport 'io.micrometer.core.instrument.composite'
+				optionalImport 'javax.swing'
+			}
+		}
+
+		plugin('io.projectreactor.addons:reactor-extra:3.2.0.RELEASE') {
+			bnd {
+				optionalImport 'javax.swing'
+				optionalImport 'kotlin'
+				optionalImport 'kotlin.jvm.functions'
+				optionalImport 'kotlin.jvm.internal'
+			}
+		}
+	}
+	
+	feature(id: 'RSocket', name: 'RSocket', version: '0.11.15') {
+	   plugin('io.rsocket:rsocket-core:0.11.15')
+	   plugin('io.rsocket:rsocket-transport-netty:0.11.15')
+	}
+	
+	feature(id: 'jcommander', name: 'jcommander', version: '1.72.0') {
+			plugin('com.beust:jcommander:1.72')
+	 }
+}
+
+wrapper {
+	gradleVersion = '5.3'
+}
