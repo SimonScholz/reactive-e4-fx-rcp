@@ -3,19 +3,17 @@
 
 <product name="Reactive E4 Fx App" uid="com.simonscholz.re4fx.app.product" id="com.simonscholz.re4fx.app.product" application="org.eclipse.fx.ui.workbench.fx.application" version="1.0.0" useFeatures="true" includeLaunchers="true">
 
-
    <configIni use="default">
    </configIni>
 
    <launcherArgs>
       <programArgs>-nosplash -clearPersistedState
       </programArgs>
-      <vmArgs>-Dorg.osgi.framework.bundle.parent=ext -Djava.library.path=FooBar
+      <vmArgs>-Dorg.osgi.framework.bundle.parent=ext -Djava.library.path=FooBar -Dosgi.framework.extensions=org.eclipse.fx.osgi -Ddetachdrag.enabled=true
       </vmArgs>
    </launcherArgs>
 
    <windowImages/>
-
 
    <launcher>
       <win useIco="false">
@@ -23,10 +21,8 @@
       </win>
    </launcher>
 
-
    <vm>
    </vm>
-
 
    <plugins>
    </plugins>
@@ -34,6 +30,7 @@
    <features>
       <feature id="com.simonscholz.re4fx.app.feature"/>
       <feature id="org.eclipse.fx.runtime.e4fx.feature"/>
+      <feature id="openjfx.standard.feature" installMode="root"/>
    </features>
 
    <configurations>
