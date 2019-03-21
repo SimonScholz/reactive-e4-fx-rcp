@@ -30,27 +30,6 @@
 					<argLine>${fx.testArgLine} ${tycho.testArgLine.local}</argLine>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.eclipse.tycho</groupId>
-				<artifactId>target-platform-configuration</artifactId>
-				<version>${tycho-version}</version>
-				<configuration>
-					<dependency-resolution>
-						<extraRequirements>
-							<requirement>
-								<type>eclipse-feature</type>
-								<id>org.eclipse.fx.runtime.e4fx.feature</id>
-								<versionRange>0.0.0</versionRange>
-							</requirement>
-							<requirement>
-								<type>eclipse-feature</type>
-								<id>com.simonscholz.re4fx.app.feature</id>
-								<versionRange>0.0.0</versionRange>
-							</requirement>
-						</extraRequirements>
-					</dependency-resolution>
-				</configuration>
-			</plugin>
 		</plugins>
 	</build>
 
