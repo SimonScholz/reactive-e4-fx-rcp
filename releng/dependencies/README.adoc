@@ -18,7 +18,7 @@ Dependencies which are currently added:
 
 The latest update site is available here:
 
-https://dl.bintray.com/simon-scholz/re4fx/
+https://dl.bintray.com/simon-scholz/eclipse-apps/re4fx/0.1.0/
 
 == Uploading to bintray
 
