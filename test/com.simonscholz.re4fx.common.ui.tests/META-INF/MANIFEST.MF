@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Tests
+Bundle-SymbolicName: com.simonscholz.re4fx.common.ui.tests
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: SIMONSCHOLZ
+Fragment-Host: com.simonscholz.re4fx.common.ui;bundle-version="1.0.0"
+Automatic-Module-Name: com.simonscholz.re4fx.common.ui.tests
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Require-Bundle: org.junit;bundle-version="4.12.0",
+ org.mockito.mockito-core;bundle-version="2.25.1",
+ at.bestsolution.fx.test.e4.junit;bundle-version="0.0.1",
+ at.bestsolution.fx.test.junit;bundle-version="0.0.1"
