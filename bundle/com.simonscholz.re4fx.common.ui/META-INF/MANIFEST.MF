@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Common UI
+Bundle-SymbolicName: com.simonscholz.re4fx.common.ui
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: SIMONSCHOLZ
+Automatic-Module-Name: com.simonscholz.re4fx.common.ui
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Require-Bundle: io.projectreactor.reactor-core;bundle-version="3.2.0",
+ org.reactivestreams.reactive-streams;bundle-version="1.0.2",
+ openjfx.base;bundle-version="11.0.0",
+ openjfx.controls;bundle-version="11.0.0"
