@@ -19,7 +19,7 @@ platform {
 	defaultQualifierMap.prefix = ''
 
 	feature(id: 'controlsfx', name: 'ControlsFx', version: '11.0.0') {
-		plugin('org.controlsfx:controlsfx:11.0.0-RC2') {
+		plugin('org.controlsfx:controlsfx:11.0.0') {
 			bnd {
 				// fix manifest problems due to e(fx)clipse class path resolution 
 				instruction 'Import-Package', 'javax.inject;version="1.0.0"'
@@ -32,8 +32,8 @@ platform {
 		plugin('com.fasterxml.jackson.core:jackson-databind:2.9.8')
 	}
 
-	feature(id: 'mockito', name: 'Mockito', version: '2.25.1') {
-		plugin('org.mockito:mockito-core:2.25.1')
+	feature(id: 'mockito', name: 'Mockito', version: '2.27.0') {
+		plugin('org.mockito:mockito-core:2.27.0')
 	}
 
 	feature(id: 'zt-exec', name: 'zt-exec', version: '1.10') {
@@ -42,9 +42,9 @@ platform {
 
 	feature(id: 'Project-Reactor', name: 'Project Reactor', version: '3.2.6') {
 
-		plugin('io.projectreactor.netty:reactor-netty:0.8.5.RELEASE')
+		plugin('io.projectreactor.netty:reactor-netty:0.8.6.RELEASE')
 		
-		plugin('io.projectreactor:reactor-core:3.2.6.RELEASE') {
+		plugin('io.projectreactor:reactor-core:3.2.8.RELEASE') {
 			bnd {
 				optionalImport 'javax.swing'
 				optionalImport 'kotlin'
@@ -62,7 +62,7 @@ platform {
 			}
 		}
 
-		plugin('io.projectreactor.addons:reactor-extra:3.2.0.RELEASE') {
+		plugin('io.projectreactor.addons:reactor-extra:3.2.2.RELEASE') {
 			bnd {
 				optionalImport 'javax.swing'
 				optionalImport 'kotlin'
@@ -70,6 +70,8 @@ platform {
 				optionalImport 'kotlin.jvm.internal'
 			}
 		}
+
+		plugin('io.projectreactor:reactor-test:3.2.8.RELEASE')
 	}
 	
 	feature(id: 'reactorfx', name: 'ReactorFx', version: '2.0.0') {
@@ -80,16 +82,29 @@ platform {
 		}
 	}
 	
-	feature(id: 'RSocket', name: 'RSocket', version: '0.11.15') {
-	   plugin('io.rsocket:rsocket-core:0.11.15')
-	   plugin('io.rsocket:rsocket-transport-netty:0.11.15')
+	feature(id: 'RSocket', name: 'RSocket', version: '0.12.1') {
+	   plugin('io.rsocket:rsocket-core:0.12.1')
+	   plugin('io.rsocket:rsocket-transport-netty:0.12.1')
 	}
 	
-	feature(id: 'jcommander', name: 'jcommander', version: '1.72.0') {
-			plugin('com.beust:jcommander:1.72')
+	feature(id: 'jcommander', name: 'jcommander', version: '1.75.0') {
+			plugin('com.beust:jcommander:1.75')
 	 }
 }
 
+dependencyUpdates.resolutionStrategy {
+  componentSelection { rules ->
+    rules.all { ComponentSelection selection ->
+      boolean rejected = ['alpha', 'beta', 'rc', 'cr', 'm', 'preview', 'b', 'ea'].any { qualifier ->
+        selection.candidate.version ==~ /(?i).*[.-]$qualifier[.\d-+]*/
+      }
+      if (rejected) {
+        selection.reject('Release candidate')
+      }
+    }
+  }
+}
+
 wrapper {
-	gradleVersion = '5.3'
+	gradleVersion = '5.4.1'
 }
