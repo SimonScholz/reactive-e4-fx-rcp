@@ -13,7 +13,8 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>com.simonscholz.re4fx.app.ui.tests</module>
+		<!--module>com.simonscholz.re4fx.app.ui.tests</module-->
+		<module>com.simonscholz.re4fx.common.ui.tests</module>
 		<module>jacoco-aggregate-tests</module>
 	</modules>
 </project>

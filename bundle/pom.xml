@@ -15,6 +15,7 @@
 	<modules>
 		<module>com.simonscholz.re4fx.app</module>
 		<module>com.simonscholz.re4fx.common</module>
+		<module>com.simonscholz.re4fx.common.ui</module>
 		<module>com.simonscholz.re4fx.reactornetty</module>
 	</modules>
 </project>

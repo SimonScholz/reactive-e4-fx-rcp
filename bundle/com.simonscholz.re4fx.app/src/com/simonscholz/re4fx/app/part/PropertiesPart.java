@@ -7,7 +7,12 @@ import java.util.stream.Collectors;
 import javax.annotation.PostConstruct;
 
 import org.controlsfx.control.CheckComboBox;
+import org.controlsfx.control.ListSelectionView;
+import org.controlsfx.validation.ValidationMessage;
 import org.controlsfx.validation.ValidationSupport;
+import org.controlsfx.validation.decoration.CompoundValidationDecoration;
+import org.controlsfx.validation.decoration.GraphicValidationDecoration;
+import org.controlsfx.validation.decoration.StyleClassValidationDecoration;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.simonscholz.re4fx.common.domain.Contributor;
@@ -31,7 +36,19 @@ public class PropertiesPart {
 		Label label = new Label("FileSize");
 		TextField textField = new TextField();
 		textField.setEditable(false);
+		CompoundValidationDecoration compoundValidationDecoration = new CompoundValidationDecoration(
+				new GraphicValidationDecoration(), new StyleClassValidationDecoration());
+		compoundValidationDecoration.removeDecorations(textField);
 		ValidationSupport.setRequired(textField, true);
+		compoundValidationDecoration.applyValidationDecoration(ValidationMessage.error(textField, "Error!"));
+
+		ListSelectionView<String> listSelectionView = new ListSelectionView<>();
+
+		listSelectionView.getSourceItems().add("Simon");
+		listSelectionView.getSourceItems().add("Ginie");
+
+		listSelectionView.getTargetItems().add("Scholz");
+		listSelectionView.getTargetItems().add("Herrmann");
 
 		// create the data to show in the CheckComboBox
 		final ObservableList<String> strings = FXCollections.observableArrayList();
@@ -44,11 +61,8 @@ public class PropertiesPart {
 
 		// and listen to the relevant events (e.g. when the selected indices or
 		// selected items change).
-		checkComboBox.getCheckModel().getCheckedItems().addListener(new ListChangeListener<String>() {
-			public void onChanged(ListChangeListener.Change c) {
-				System.out.println(checkComboBox.getCheckModel().getCheckedItems());
-			}
-		});
+		checkComboBox.getCheckModel().getCheckedItems().addListener(
+				(ListChangeListener<String>) c -> System.out.println(checkComboBox.getCheckModel().getCheckedItems()));
 
 		TextArea textArea = new TextArea();
 		TypeReference<List<Contributor>> cListType = new TypeReference<List<Contributor>>() {
@@ -60,7 +74,7 @@ public class PropertiesPart {
 			textArea.setText(contributors.stream().map(String::valueOf).collect(Collectors.joining()));
 		}, Throwable::printStackTrace);
 
-		VBox hBox = new VBox(label, textField, checkComboBox, textArea);
+		VBox hBox = new VBox(label, textField, listSelectionView, checkComboBox, textArea);
 		parent.setCenter(hBox);
 
 	}

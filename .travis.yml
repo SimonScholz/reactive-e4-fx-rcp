@@ -31,7 +31,10 @@ cache:
   - $HOME/.gradle
 
 # Build the server first and then build the eclipse plug-ins
-script: 
+script:
+- cd releng/dependencies/
+- ./gradlew clean uS
+- cd ../../
 - ./mvnw clean verify -Pjacoco
 
 # integration with codecov

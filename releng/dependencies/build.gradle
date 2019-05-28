@@ -24,6 +24,7 @@ platform {
 				// fix manifest problems due to e(fx)clipse class path resolution 
 				instruction 'Import-Package', 'javax.inject;version="1.0.0"'
 				instruction 'Require-Capability', 'osgi.ee; filter="(&(osgi.ee=JavaSE)(version=11))"'
+				instruction 'Java-Module-AddExports', 'javafx.graphics/javafx.scene=.,javafx.graphics/javafx.css=.,javafx.controls/javafx.scene.control=.,javafx.base/javafx.event=.,javafx.base/javafx.collections=.,javafx.graphics/javafx.css=.,javafx.graphics/com.sun.javafx.scene=.,javafx.graphics/javafx.scene=.,javafx.graphics/com.sun.javafx.scene.traversal=.,javafx.graphics/com.sun.javafx.css=.,javafx.controls/com.sun.javafx.scene.control.behavior=.,javafx.controls/com.sun.javafx.scene.control=.,javafx.controls/com.sun.javafx.scene.control.inputmap=.,javafx.base/com.sun.javafx.event=.,javafx.base/com.sun.javafx.collections=.,javafx.base/com.sun.javafx.runtime=.,javafx.graphics/com.sun.javafx.css=.,javafx.graphics/com.sun.javafx.application=.,javafx.graphics/com.sun.glass.ui=.'
 			}
 		}
 	}
@@ -40,10 +41,7 @@ platform {
 		plugin('org.zeroturnaround:zt-exec:1.10')
 	}
 
-	feature(id: 'Project-Reactor', name: 'Project Reactor', version: '3.2.6') {
-
-		plugin('io.projectreactor.netty:reactor-netty:0.8.6.RELEASE')
-		
+	feature(id: 'Project-Reactor', name: 'Project Reactor', version: '3.2.8') {
 		plugin('io.projectreactor:reactor-core:3.2.8.RELEASE') {
 			bnd {
 				optionalImport 'javax.swing'
@@ -71,9 +69,20 @@ platform {
 			}
 		}
 
-		plugin('io.projectreactor:reactor-test:3.2.8.RELEASE')
+		plugin('io.projectreactor:reactor-test:3.2.8.RELEASE') {
+			bnd {
+				optionalImport 'kotlin'
+				optionalImport 'kotlin.jvm'
+				optionalImport 'kotlin.jvm.internal'
+				optionalImport 'kotlin.reflect'
+			}
+		}
 	}
 	
+	feature(id: 'reactor-netty', name: 'Reactor Netty', version: '0.8.6') {
+		plugin('io.projectreactor.netty:reactor-netty:0.8.6.RELEASE')
+	}
+
 	feature(id: 'reactorfx', name: 'ReactorFx', version: '2.0.0') {
 		plugin('com.github.shadskii:reactorfx:2.0.0') {
 			bnd {
@@ -86,10 +95,10 @@ platform {
 	   plugin('io.rsocket:rsocket-core:0.12.1')
 	   plugin('io.rsocket:rsocket-transport-netty:0.12.1')
 	}
-	
-	feature(id: 'jcommander', name: 'jcommander', version: '1.75.0') {
-			plugin('com.beust:jcommander:1.75')
-	 }
+
+	feature(id: 'jcommander', name: 'jcommander', version: '1.74.0') {
+			plugin('com.beust:jcommander:1.74')
+	}
 }
 
 dependencyUpdates.resolutionStrategy {

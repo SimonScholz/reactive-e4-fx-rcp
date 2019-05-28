@@ -9,6 +9,8 @@ import org.junit.runner.RunWith;
 
 import at.bestsolution.fx.test.junit.FXRunner;
 import javafx.scene.Node;
+import reactor.core.Disposable;
+import reactor.test.publisher.TestPublisher;
 
 @RunWith(FXRunner.class)
 public class ProgressIndicatorTest {
@@ -26,7 +28,7 @@ public class ProgressIndicatorTest {
 	public void testShowIndicator() {
 		// act
 		progressIndicator.show();
-		
+
 		// assert
 		assertTrue(progressIndicatorNode.isVisible());
 		assertTrue(progressIndicatorNode.isManaged());
@@ -37,18 +39,26 @@ public class ProgressIndicatorTest {
 		// act
 		progressIndicator.show();
 		progressIndicator.hide();
-		
+
 		// assert
 		assertFalse(progressIndicatorNode.isVisible());
 		assertFalse(progressIndicatorNode.isManaged());
 	}
 
 	@Test
-	public void testTransformerHide() {
+	public void testTransformerMultipleSubscriptionsCanceled() {
 		// act
-		progressIndicator.show();
-		progressIndicator.hide();
+		TestPublisher<String> testPublisher = TestPublisher.create();
+		TestPublisher<String> testPublisher2 = TestPublisher.create();
+
+		Disposable subscribe = testPublisher.mono().transform(progressIndicator.progressIndicatorTransformer())
+				.subscribe();
+		Disposable subscribe2 = testPublisher2.mono().transform(progressIndicator.progressIndicatorTransformer())
+				.subscribe();
 		
+		subscribe.dispose();
+		subscribe2.dispose();
+
 		// assert
 		assertFalse(progressIndicatorNode.isVisible());
 		assertFalse(progressIndicatorNode.isManaged());

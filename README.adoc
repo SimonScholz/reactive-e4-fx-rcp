@@ -6,6 +6,14 @@ You can build the app like this:
 
 [source, console]
 ----
+# Creates the update site, which will be used by the target platform of the projects
+cd releng/dependencies/
+
+./gradlew clean uS
+
+cd ../../
+
+# Build the project based on the target-platform
 ./mvnw clean verify
 ----
 

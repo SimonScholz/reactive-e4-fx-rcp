@@ -10,4 +10,8 @@ Bundle-RequiredExecutionEnvironment: JavaSE-11
 Require-Bundle: org.junit;bundle-version="4.12.0",
  org.mockito.mockito-core;bundle-version="2.25.1",
  at.bestsolution.fx.test.e4.junit;bundle-version="0.0.1",
- at.bestsolution.fx.test.junit;bundle-version="0.0.1"
+ at.bestsolution.fx.test.junit;bundle-version="0.0.1",
+ at.bestsolution.fx.test.rcontrol;bundle-version="0.0.1",
+ org.eclipse.fx.core;bundle-version="3.5.0",
+ org.openjfx.javafx-base;bundle-version="11.0.0",
+ io.projectreactor.reactor-test;bundle-version="3.2.8"

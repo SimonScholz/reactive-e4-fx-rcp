@@ -9,7 +9,7 @@
    <launcherArgs>
       <programArgs>-nosplash -clearPersistedState
       </programArgs>
-      <vmArgs>-Dorg.osgi.framework.bundle.parent=ext -Djava.library.path=FooBar -Dosgi.framework.extensions=org.eclipse.fx.osgi -Ddetachdrag.enabled=true
+      <vmArgs>-Dorg.osgi.framework.bundle.parent=ext -Djava.library.path=FooBar -Dosgi.framework.extensions=org.eclipse.fx.osgi -Ddetachdrag.enabled=true --add-opens=javafx.graphics/com.sun.javafx.css=ALL-UNNAMED
       </vmArgs>
    </launcherArgs>
 

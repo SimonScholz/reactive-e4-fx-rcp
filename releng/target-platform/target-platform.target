@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><?pde version="3.8"?><target name="target-platform">
 	<locations>
 		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-			<unit id="org.eclipse.gef.fx.sdk.feature.group" version="5.0.2.201901221055"/>
-			<unit id="org.eclipse.gef.geometry.sdk.feature.group" version="5.0.2.201901221055"/>
-			<unit id="org.eclipse.gef.mvc.sdk.feature.group" version="5.0.2.201901221055"/>
-			<unit id="org.eclipse.gef.zest.sdk.feature.group" version="5.0.2.201901221055"/>
+			<unit id="org.eclipse.fx.osgi" version="0.0.0"/>
 			<repository location="http://download.eclipse.org/releases/2019-03"/>
 		</location>
 		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
@@ -22,27 +19,29 @@
 			<unit id="openjfx.swt.feature.feature.group" version="11.0.0.201901231300"/>
 		</location>
 		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-			<unit id="org.eclipse.fx.target.feature.feature.group" version="3.6.0.201903210201"/>
-			<repository location="http://download.eclipse.org/efxclipse/runtime-nightly/site"/>
+			<unit id="org.eclipse.fx.target.feature.feature.group" version="3.5.0.201902252257"/>
+			<repository location="https://download.eclipse.org/efxclipse/runtime-released/3.5.0/site/"/>
 		</location>
 		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-			<unit id="Project-Reactor.feature.group" version="3.2.6"/>
-			<unit id="Project-Reactor.source.feature.group" version="3.2.6"/>
-			<unit id="RSocket.feature.group" version="0.11.15"/>
-			<unit id="RSocket.source.feature.group" version="0.11.15"/>
+			<unit id="Project-Reactor.feature.group" version="3.2.8"/>
+			<unit id="Project-Reactor.source.feature.group" version="3.2.8"/>
+			<unit id="RSocket.feature.group" version="0.12.1"/>
+			<unit id="RSocket.source.feature.group" version="0.12.1"/>
 			<unit id="controlsfx.feature.group" version="11.0.0"/>
 			<unit id="controlsfx.source.feature.group" version="11.0.0"/>
 			<unit id="jackson.feature.group" version="2.9.8"/>
 			<unit id="jackson.source.feature.group" version="2.9.8"/>
-			<unit id="jcommander.feature.group" version="1.72.0"/>
-			<unit id="jcommander.source.feature.group" version="1.72.0"/>
-			<unit id="mockito.feature.group" version="2.25.1"/>
-			<unit id="mockito.source.feature.group" version="2.25.1"/>
+			<unit id="jcommander.feature.group" version="1.74.0"/>
+			<unit id="jcommander.source.feature.group" version="1.74.0"/>
+			<unit id="mockito.feature.group" version="2.27.0"/>
+			<unit id="mockito.source.feature.group" version="2.27.0"/>
+			<unit id="reactor-netty.feature.group" version="0.8.6"/>
+			<unit id="reactor-netty.source.feature.group" version="0.8.6"/>
 			<unit id="reactorfx.feature.group" version="2.0.0"/>
 			<unit id="reactorfx.source.feature.group" version="2.0.0"/>
 			<unit id="zt-exec.feature.group" version="1.10.0"/>
 			<unit id="zt-exec.source.feature.group" version="1.10.0"/>
-			<repository location="https://dl.bintray.com/simon-scholz/eclipse-apps/re4fx/0.1.0/"/>
+			<repository location="file:/home/simon/git/simon/reactive-e4-fx-rcp/releng/dependencies/build/updatesite/"/>
 		</location>
 	</locations>
 </target>
