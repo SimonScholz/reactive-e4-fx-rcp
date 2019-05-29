@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmi:id="_sQ9a4UBHEemNjZXcBsTEeA" elementId="org.eclipse.e4.application" bindingContexts="_sQ9a4EBHEemNjZXcBsTEeA">
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_sQ9a4UBHEemNjZXcBsTEeA" elementId="org.eclipse.e4.application" bindingContexts="_sQ9a4EBHEemNjZXcBsTEeA">
   <children xsi:type="basic:TrimmedWindow" xmi:id="_wJRJMEBHEemNjZXcBsTEeA" elementId="com.simonscholz.app.trimmedwindow.0" x="20" y="20" width="800" height="600">
     <children xsi:type="advanced:PerspectiveStack" xmi:id="_xfmqAEBHEemNjZXcBsTEeA" elementId="com.simonscholz.app.perspectivestack.0">
       <children xsi:type="advanced:Perspective" xmi:id="_xve5EEBHEemNjZXcBsTEeA" elementId="com.simonscholz.app.perspective.0">
@@ -13,13 +13,19 @@
         </children>
       </children>
     </children>
-    <mainMenu xmi:id="_waRZoEBHEemNjZXcBsTEeA" elementId="com.simonscholz.app.menu.0"/>
+    <mainMenu xmi:id="_waRZoEBHEemNjZXcBsTEeA" elementId="com.simonscholz.app.menu.0">
+      <children xsi:type="menu:Menu" xmi:id="_uW5YMIIoEempneQ8i1IYkg" elementId="com.simonscholz.re4fx.app.menu.about" label="About">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_wDCJ4IIoEempneQ8i1IYkg" elementId="com.simonscholz.re4fx.app.handledmenuitem.showabout" label="Show About" command="_xMpdUIIoEempneQ8i1IYkg"/>
+      </children>
+    </mainMenu>
     <sharedElements xsi:type="basic:Part" xmi:id="_1w9KcEBHEemNjZXcBsTEeA" elementId="com.simonscholz.app.part.elements" containerData="" contributionURI="bundleclass://com.simonscholz.re4fx.app/com.simonscholz.re4fx.app.part.ElementsPart" label="Elements Placeholder"/>
   </children>
+  <handlers xmi:id="_zKCXEIIoEempneQ8i1IYkg" elementId="com.simonscholz.re4fx.app.handler.0" contributionURI="bundleclass://com.simonscholz.re4fx.app/com.simonscholz.re4fx.app.handler.AboutHandler" command="_xMpdUIIoEempneQ8i1IYkg"/>
   <rootContext xmi:id="_sQ9a4EBHEemNjZXcBsTEeA" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="In Dialog and Windows">
     <children xmi:id="_sQ9a4kBHEemNjZXcBsTEeA" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
     <children xmi:id="_sQ9a40BHEemNjZXcBsTEeA" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
   </rootContext>
+  <commands xmi:id="_xMpdUIIoEempneQ8i1IYkg" elementId="com.simonscholz.re4fx.app.command.about" commandName="About"/>
   <addons xmi:id="_sQ9a5EBHEemNjZXcBsTEeA" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_sQ9a5UBHEemNjZXcBsTEeA" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_sQ9a5kBHEemNjZXcBsTEeA" elementId="org.eclipse.fx.ui.keybindings.e4.service" contributionURI="bundleclass://org.eclipse.fx.ui.keybindings.e4/org.eclipse.fx.ui.keybindings.e4.BindingServiceAddon"/>

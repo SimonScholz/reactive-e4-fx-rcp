@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Slf4j
+Bundle-SymbolicName: com.simonscholz.re4fx.slf4j
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: SIMONSCHOLZ
+Fragment-Host: org.slf4j.api;bundle-version="1.7.10"
+Automatic-Module-Name: com.simonscholz.re4fx.slf4j
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Require-Bundle: ch.qos.logback.classic;bundle-version="1.1.2",
+ ch.qos.logback.core;bundle-version="1.1.2"

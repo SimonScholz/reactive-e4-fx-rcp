@@ -24,6 +24,7 @@ platform {
 				// fix manifest problems due to e(fx)clipse class path resolution 
 				instruction 'Import-Package', 'javax.inject;version="1.0.0"'
 				instruction 'Require-Capability', 'osgi.ee; filter="(&(osgi.ee=JavaSE)(version=11))"'
+				// Make use of Java-Module-AddExports because ControlsFx uses internal api of OpenJFX11
 				instruction 'Java-Module-AddExports', 'javafx.graphics/javafx.scene=.,javafx.graphics/javafx.css=.,javafx.controls/javafx.scene.control=.,javafx.base/javafx.event=.,javafx.base/javafx.collections=.,javafx.graphics/javafx.css=.,javafx.graphics/com.sun.javafx.scene=.,javafx.graphics/javafx.scene=.,javafx.graphics/com.sun.javafx.scene.traversal=.,javafx.graphics/com.sun.javafx.css=.,javafx.controls/com.sun.javafx.scene.control.behavior=.,javafx.controls/com.sun.javafx.scene.control=.,javafx.controls/com.sun.javafx.scene.control.inputmap=.,javafx.base/com.sun.javafx.event=.,javafx.base/com.sun.javafx.collections=.,javafx.base/com.sun.javafx.runtime=.,javafx.graphics/com.sun.javafx.css=.,javafx.graphics/com.sun.javafx.application=.,javafx.graphics/com.sun.glass.ui=.'
 			}
 		}
